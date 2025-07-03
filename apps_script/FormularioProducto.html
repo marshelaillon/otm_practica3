@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input {
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="formulario">
+    <label>ID:</label>
+    <input type="text" name="id">
+
+    <label>Código:</label>
+    <input type="text" name="codigo">
+
+    <label>Producto:</label>
+    <input type="text" name="producto">
+
+    <label>Precio Venta:</label>
+    <input type="number" name="precio">
+
+    <button type="button" onclick="guardar()">Guardar</button>
+  </form>
+
+  <script>
+    function guardar() {
+      const datos = {
+        id: document.querySelector('[name="id"]').value,
+        codigo: document.querySelector('[name="codigo"]').value,
+        producto: document.querySelector('[name="producto"]').value,
+        precio: document.querySelector('[name="precio"]').value,
+      };
+
+      google.script.run
+        .withSuccessHandler(() => google.script.host.close())
+        .guardarProducto(datos);
+    }
+  </script>
+</body>
+
+</html>
