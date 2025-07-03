@@ -62,7 +62,7 @@ Cada nuevo producto registrado se inserta automáticamente en esta tabla, centra
 1. Sube la hoja de cálculos a Google Sheets.
 2. Abre el editor de Apps Script (`Extensiones > Apps Script`).
 3. Crea dos archivos (`Code\.gs` y `FormularioProducto\.html`).
-4. Copia el contenido de los archivos que se encuentran en la la carpeta `apps_script`, y guarda los cambios.
+4. Copia el contenido de los archivos que se encuentran en la la carpeta `apps_scripts`, y guarda los cambios.
 4. Asigna funciones a los botones según los nombres de las funciones del archivo `Code.gs`.
 5. ¡Listo para usar!
 
